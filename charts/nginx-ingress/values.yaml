@@ -6,7 +6,7 @@ controller:
   image:
     repository: quay.io/kubernetes-ingress-controller/nginx-ingress-controller
     tag: "0.31.1"
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     # www-data -> uid 101
     runAsUser: 101
     allowPrivilegeEscalation: true
@@ -452,7 +452,7 @@ defaultBackend:
   image:
     repository: k8s.gcr.io/defaultbackend-amd64
     tag: "1.4"
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     # nobody user -> uid 65534
     runAsUser: 65534
 
